@@ -1,12 +1,18 @@
 from PyQt5 import QtWidgets, uic
 import sys
+import os
 import math
 
+if getattr(sys, 'frozen', False):
+    RELATIVE_PATH = os.path.dirname(sys.executable)
+else:
+    RELATIVE_PATH = os.path.dirname(__file__)
 
 class Ui(QtWidgets.QMainWindow):
     def __init__(self):
         super(Ui, self).__init__()
-        uic.loadUi("kut.ui", self)
+        ui_path = r"D:\Desktop\Coding\Personal\Progetti Python\KSP Utility Tool\kut.ui"
+        uic.loadUi(ui_path, self)
         self.comb_push_button = self.findChild(QtWidgets.QPushButton, "combPushButton")
         self.comb_push_button.clicked.connect(self.calculate_button_pressed)
 
@@ -159,7 +165,7 @@ planets = {"Kerbin": {"mk16": 0.029, "mk2r": 0.039, "mk16xl": 0.020, "mk25": 1.0
            "Eve": {"mk16": 0.009, "mk2r": 0.012, "mk16xl": 0.006, "mk25": 0.340, "mk12r": 0.330},
            "Laythe": {"mk16": 0.036, "mk2r": 0.047, "mk16xl": 0.024, "mk25": 1.331, "mk12r": 1.291},
            }
-
-app = QtWidgets.QApplication(sys.argv)
-window = Ui()
-app.exec_()
+if __name__ == '__main__':
+    app = QtWidgets.QApplication(sys.argv)
+    window = Ui()
+    app.exec_()
