@@ -7,7 +7,7 @@ import math
 class Ui(QtWidgets.QMainWindow):
     def __init__(self):
         super(Ui, self).__init__()
-        ui_path = r"D:\Desktop\Coding\Personal\Progetti Python\KSP Utility Tool\kutgui.ui"
+        ui_path = r"Kerbal Utility Tool\kut\PyQt5\kutgui.ui"
         uic.loadUi(ui_path, self)
         self.comb_push_button = self.findChild(QtWidgets.QPushButton, "combPushButton")
         self.comb_push_button.clicked.connect(self.calculate_button_pressed)
