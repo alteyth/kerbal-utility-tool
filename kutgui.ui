@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Kerbal Utility Tool 0.1.0</string>
+   <string>Kerbal Utility Tool 0.2.0</string>
   </property>
   <widget class="QWidget" name="window">
    <widget class="QPushButton" name="combPushButton">
