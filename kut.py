@@ -8,7 +8,7 @@ class Ui(QtWidgets.QMainWindow):
     def __init__(self):
         super(Ui, self).__init__()
 
-        ui_path = r"Kerbal Utility Tool\kut\PyQt5\kutgui.ui"
+        ui_path = r"kutgui.ui"
 
         uic.loadUi(ui_path, self)
         self.comb_push_button = self.findChild(QtWidgets.QPushButton, "combPushButton")
