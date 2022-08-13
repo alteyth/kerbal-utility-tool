@@ -3,10 +3,6 @@ import sys
 import os
 import math
 
-if getattr(sys, 'frozen', False):
-    RELATIVE_PATH = os.path.dirname(sys.executable)
-else:
-    RELATIVE_PATH = os.path.dirname(__file__)
 
 class Ui(QtWidgets.QMainWindow):
     def __init__(self):
