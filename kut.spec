@@ -8,7 +8,7 @@ a = Analysis(
     ['kut.py'],
     pathex=[],
     binaries=[],
-    datas=[('dist\kut\PyQt5\kutgui.ui', '.')],
+    datas=[('Kerbal Utility Tool\kut\PyQt5\kutgui.ui', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
